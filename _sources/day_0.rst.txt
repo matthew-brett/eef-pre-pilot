@@ -2,10 +2,6 @@
 Day 0
 #####
 
-On Tuesday September 19th we are in `Room 310 Watson Building
-<https://universityofbirmingham.service-now.com/eqpublic/rooms.do?room=c0fd79974d8d6c008163baecd9deaa2d>`_
-(R15 on the `UoB campus map`_).
-
 *******
 Morning
 *******
