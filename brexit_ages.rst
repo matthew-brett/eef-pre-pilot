@@ -84,7 +84,7 @@ The mean is lower for the Remain group:
 .. nbplot::
 
     >>> mean(remain_ages)
-    48.015503875968989
+    48.0155038759689...
 
 The difference between the means is:
 

@@ -44,5 +44,4 @@ algorithms and data analysis at the University of Birmingham.
     permuter
     linear
     samples_and_spread
-    paired
     slim_setup

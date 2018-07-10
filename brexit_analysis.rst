@@ -33,7 +33,7 @@ We now have something called a "data frame":
 .. nbplot::
 
     >>> type(audit_data)
-    pandas.core.frame.DataFrame
+    <class 'pandas.core.frame.DataFrame'>
 
 The ``DataFrame`` type of object is a table, rather like a spreadsheet, where
 there is one row per person surveyed, and one column for each question in the
@@ -43,13 +43,13 @@ dictionary:
 .. nbplot::
 
     >>> audit_data
-          cu041  cu042  cu043  cu044  cu045  cu046  cu047  cu048  cu049  cu0410  \
-    0         0      0      0      0      1      1      0      0      0       0 ...
-    1         0      0      0      0      0      0      0      0      0       1 ...
-    2         0      0      0      0      1      0      0      0      0       0 ...
-    3         0      0      0      0      1      0      1      0      0       0 ...
-    4         0      0      0      1      1      0      1      0      0       0 ...
-    5         1      1      0      0      0      0      0      0      0       0 ...
+          cu041  cu042  cu043  cu044  cu045  cu046  cu047   ...     week      wts  numage  weight0  sgrade_grp  age_grp  region2
+    0         0      0      0      0      1      1      0   ...      648  3.41659      37  3.41659           1        4        3
+    1         0      0      0      0      0      0      0   ...      648  2.68198      55  2.68198           2        6        3
+    2         0      0      0      0      1      0      0   ...      648  0.79379      71  0.79379           2        7        4
+    3         0      0      0      0      1      0      1   ...      648  1.40580      37  1.40580           1        4        4
+    4         0      0      0      1      1      0      1   ...      648  0.89475      42  0.89475           2        4        4
+    5         1      1      0      0      0      0      0   ...      648  3.22535       0  3.22535           1        1        3
     ...
     <BLANKLINE>
     [1771 rows x 370 columns]
@@ -128,7 +128,7 @@ What type of thing is ``matplotlib.pyplot``?
 .. nbplot::
 
     >>> type(matplotlib.pyplot)
-    module
+    <class 'module'>
 
 We use the ``hist`` function in ``matplotlib.pyplot`` to plot a histogram of
 the respondents' ages:
@@ -146,7 +146,7 @@ shorter name:
     >>> # Set the name "plt" to point to the "matplotlib.pyplot" module
     >>> plt = matplotlib.pyplot
     >>> type(plt)
-    module
+    <class 'module'>
 
 Now we can be more concise:
 
@@ -167,13 +167,22 @@ First we get the age column into its own variable.
 
     >>> age_column = brexit_age['age']
     >>> age_column
+    0       37
+    1       55
+    2       71
+    3       37
+    4       42
+    5        0
+    ...
+    1770    25
+    Name: age, Length: 1771, dtype: int64
 
 This variable is of type ``Series``:
 
 .. nbplot::
 
     >>> type(age_column)
-    pandas.core.series.Series
+    <class 'pandas.core.series.Series'>
 
 The ``Series`` represents the column from the data frame.  Like the data
 frame, it has row (value) labels.  In our case, these are just numbers from 0.
