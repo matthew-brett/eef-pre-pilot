@@ -213,14 +213,7 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'les_data_analysis_doc'
 
-_latex_macros = [
-    r'\newcommand{L}[1]{\| #1 \|}',
-    r'\newcommand{VL}[1]{\L{ \vec{#1} }}',
-    r'\newcommand{R}[1]{\operatorname{Re}\,(#1)}',
-    r'\newcommand{I}[1]{\operatorname{Im}\, (#1)}',
-]
-
-rst_prolog = ':math:`{}`\n'.format(''.join(macro for macro in _latex_macros))
+rst_prolog = ''
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -236,7 +229,6 @@ latex_elements = {
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
-    'preamble': '\n'.join(_latex_macros),
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
