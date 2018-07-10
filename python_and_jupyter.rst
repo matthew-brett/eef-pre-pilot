@@ -1,8 +1,13 @@
-####################################
-Introduction to the Jupyter Notebook
-####################################
+###################################
+Introduction to Python, via Jupyter
+###################################
 
 .. code-links:: clear
+
+This is a Jupyter Notebook.
+
+For the moment, I'll introduce the Notebook, and then get on to how Python
+works.
 
 ********************
 A Notebook has cells
@@ -14,21 +19,44 @@ It consists of *cells*. This is a text cell.  The cell below is a code cell.
 
 You can mix code and text cells in any order.
 
+We won't pay much attention to text cells for now, but they are very useful to
+weave explanation and code, to justify and explain your analysis.
+
 To move from one cell to the next, you can use Shift-Enter. When you do
 this inside a code cell, it will execute, and move to the next cell.
 
-Press Shift-Enter now, to move out of this cell to the next, then Shift-Enter
-again to run the text cell, and move again.
+Press Shift-Enter now, to move out of this cell to the next.
+
+******
+Python
+******
+
+What follows is a code cell.  In fact, it is Python code.  Press Shift-Enter
+to move out of this cell into the code code, and Shift-Enter again to execute
+the code cell.
 
 .. nbplot::
 
     >>> a = 10
 
-It doesn't look as if anything has happened, but when you did Shift-Enter in
-the cell above, the Jupyter Notebook sent the code off to be executed by
-`Python <https://python.org>`_.  Python is a programming language with a
-simple syntax that many universities use for teaching.  There is also a large
-community of scientists and tech companies that use Python for data analysis.
+Now you've executed the code cell, it doesn't look as if anything has
+happened, but when you did Shift-Enter in the cell above, the Jupyter Notebook
+sent the code off to be executed by `Python <https://python.org>`_.  Python is
+a programming language with a easy-to-read syntax that is very popular
+for teaching, and for data analysis.  It's very popular in academia, and in
+industry, especially for data analysis.
+
+.. what we have to cover
+
+   A variable as a name referring to something.
+   LHS and RHS
+   The type of a thing
+   Numbers
+   Strings
+   Lists
+   True and False
+   Functions
+   Sum
 
 The code cell above takes the *number* 10, and puts it into a *variable*
 called ``a``. Now, when we use the variable ``a``, it will carry the value 10.
