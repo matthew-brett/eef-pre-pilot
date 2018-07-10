@@ -43,6 +43,6 @@ You will need the "Python 3.6" version of the Anaconda distribution.
 * I wouldn't bother subscribing to the free Anaconda cloud account, but hey,
   that's up to you.
 
-Any problems, email me (Matthew) at m.brett@bham.ac.uk, or come
-along to my office, SG24 on the ground floor of the Biosciences building,
-anytime from 2-5 on Monday 18th.
+Any problems, email me (Matthew) at m.brett@bham.ac.uk, or come along to my
+office, SG27 on the ground floor of the Biosciences building, anytime from
+2.30-5 on Tuesday 12th.
