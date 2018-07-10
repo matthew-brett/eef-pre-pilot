@@ -25,14 +25,12 @@ weave explanation and code, to justify and explain your analysis.
 To move from one cell to the next, you can use Shift-Enter. When you do
 this inside a code cell, it will execute, and move to the next cell.
 
-Press Shift-Enter now, to move out of this cell to the next.
-
 ******
 Python
 ******
 
 What follows is a code cell.  In fact, it is Python code.  Press Shift-Enter
-to move out of this cell into the code code, and Shift-Enter again to execute
+to move out of this cell into the code cell, and Shift-Enter again to execute
 the code cell.
 
 .. nbplot::
@@ -42,8 +40,8 @@ the code cell.
 Now you've executed the code cell, it doesn't look as if anything has
 happened, but when you did Shift-Enter in the cell above, the Jupyter Notebook
 sent the code off to be executed by `Python <https://python.org>`_.  Python is
-a programming language with a easy-to-read syntax that is very popular
-for teaching, and for data analysis.  It's very popular in academia, and in
+a programming language with a easy-to-read syntax that is widely used for
+teaching, and for data analysis.  It's very popular in academia, and in
 industry, especially for data analysis.
 
 .. what we have to cover
@@ -58,14 +56,30 @@ industry, especially for data analysis.
    Functions
    Sum
 
-The code cell above takes the *number* 10, and puts it into a *variable*
-called ``a``. Now, when we use the variable ``a``, it will carry the value 10.
-We say that the *variable* ``a`` has the *value* 10.
+************
+Reading code
+************
 
-We often want to see the values of variables, and the Notebook makes it easy
-to do that. We put the variable who value we want to see on its own at the end
-of a cell. The Notebook detects that we have done that, and shows us the
-value.  Here we display the value of the variable ``a``:
+When you learn programming, and even when you get a lot of experience, it is
+useful to read to yourself what the code is doing.
+
+In the cell above, we are *setting* a *variable*.
+
+When we set a variable, the statement has two parts.  There is the Left Hand
+Side (or LHS), to the left of the equals sign.  In our case the LHS is ``a``.
+``a`` is a *name*, that we are giving to the *contents* from the Right Hand
+Side (RHS)
+
+The RHS is the number ``10``.  We can read the statement ``a = 10`` in a
+verbose way as "Make the name ``a`` refer to the number ``10``.  After this
+statement, we can say that *variable* (name) ``a`` has *value* (refers to) the
+number ``10``.
+
+When working on code, we often want to see the values of variables, and the
+Notebook makes it easy to do that. We put the variable whose value we want to
+see on its own at the end of a cell. Here the variable is a Right Hand Side,
+without a Left Hand Side.  The Notebook detects that we have done that, and
+shows us the value.  Here we display the value of the variable ``a``:
 
 .. nbplot::
 
@@ -73,11 +87,7 @@ value.  Here we display the value of the variable ``a``:
     10
 
 Notice that the Notebook made a new type of display after the cell, with the
-prompt in red, and starting with ``Out[``. Every code cell has a number, such
-as 1, or 2. The Notebook labels the cell with its number.  The code that will
-be executed has the label ``In[`` followed by the cell number, meaning
-*Input*. If there is a variable on its own at the end, that will generate an
-*Output* cell, labeled with ``Out[`` followed by the cell number.
+prompt in red, and starting with ``Out[``.
 
 Our code cells can have lines that do some work, followed by a variable on its
 own, so we can see its value. Like this:
@@ -88,22 +98,53 @@ own, so we can see its value. Like this:
     >>> b
     5
 
+Now we know how to read the first line as "make the name ``b`` refer to the
+number ``5``.  Read the second line as "show me what the name ``b`` refers
+to".
+
+Time for an exercise:
+
+* Start a new Notebook;
+* Set the name ``a`` to refer to the number 6
+* Set the name ``c`` to refer to the name ``a``
+* What do you think the name ``c`` refers to now, when we show it?  Try and
+  predict.  Then try showing the value in the Notebook.
+
+****************************************
+The Right Hand Side can be an expression
+****************************************
+
+We have seen a couple of code cells with the variable (name) on the LHS,
+followed by an equals sign ``=``, followed by a RHS, that is a number, ``10``
+or ``5``.
+
+The RHS does not have to be a value, like a number.  It can be an *expression*
+- some code, that Python understands, that ends up returning a value.
+
+For example, Python understands the expression ``5 + 6`` to mean "add the
+numbers 5 and 6, and return the result".
+
+Try a code cell where you set the name ``c`` to refer to the result of ``5 +
+6``.
+
+Make a code cell where you set the name ``d`` to refer to the result of ``(10
++ 5 + 1) / 4``.
+
 ****************************
 The Notebook as a calculator
 ****************************
 
-To get output from the cell, we don't actually need to have a variable on its
-own. We can put any *expression* on the last line. An expression is anything
-that returns a value.  So ``b`` on its own returns a value, which is the value
-of ``b`` - in this case 5. But we can also do something like this:
+The code cell shows output, when it ends with RHS without a LHS.  The RHS can
+be a number, or a variable, as we have seen before, but it can also be an
+*expression*.  So, we can make a code cell like this:
 
 .. nbplot::
 
     >>> (10 + 5 + 1) / 4
     4.0
 
-Notice, we didn't use any variables. ``(10 + 5 + 1) / 4`` is an expression -
-some code that returns a value.
+Notice, we didn't use any variables. The RHS, on its own, is ``(10 + 5 + 1) /
+4`` is an expression - some code that returns a value.
 
 This means that we can use the Notebook as a simple calculator. You've
 already seen ``+`` and ``/`` and the parentheses. You also have ``*`` for
@@ -117,21 +158,15 @@ example, here's :math:`10^4`:
 
 Try calculating :math:`6 (2^3) / 4` (it should equal 12):
 
-.. nbplot::
+Try :math:`1024^2 / 2^{16}` (it should equal 16).
 
-    >>> 6 * 2 ** 3 / 4
-    12.0
+***************
+Using variables
+***************
 
-Try :math:`1024^2 / 2^{16}`
-
-.. nbplot::
-
-    >>> 1024 ** 2 / 2**16
-    16.0
-
-We can also use variables in our calculations. For example, we might be
-interested in the result of :math:`2 x^2 + 3x + 10`. We want to calculate what
-answer we get for :math:`x = 2`.
+The great value of variables is that we can use them in calculations. For
+example, we might be interested in the result of :math:`2 x^2 + 3x + 10`. We
+want to calculate what answer we get for :math:`x = 2`.
 
 .. nbplot::
 
@@ -188,9 +223,10 @@ around the string. The quotes tell Python that this is text (string) data:
     >>> my_name
     'Matthew'
 
+What happens when I miss off the quotes in the line above?
+
 You can use single quotes (``'``) to go round strings, or double quotes
-(``"``). It doesn't matter to Python, it recognizes you want to make a
-string.
+(``"``). It doesn't matter to Python, it recognizes you want to make a string.
 
 .. nbplot::
 
@@ -254,6 +290,34 @@ There are functions which work on numbers as well. For example, the function
 
     >>> max(10, 4)
     10
+
+******************************
+What type of thing have I got?
+******************************
+
+So far we have seen two different types of thing that a variable can refer to
+- numbers and strings.
+
+We often want to find out what type of thing a variable refers to.  We can use
+the function ``type`` for this.  For example:
+
+.. nbplot::
+
+    >>> # Set name "a" to refer to the number 5
+    >>> a = 5
+    >>> # What type of thing does "a" refer to?
+    >>> type(a)
+    <class 'int'>
+
+Here ``a`` refers to an integer (whole number).
+
+.. nbplot::
+
+    >>> # What type of thing does "my_name" refer to?
+    >>> type(my_name)
+    <class 'str'>
+
+``my_name`` refers to a string.
 
 *****
 Lists
@@ -372,6 +436,13 @@ use the ``random`` module, we have to ``import`` it - like this:
 .. nbplot::
 
     >>> import random
+
+What type of thing is this?
+
+.. nbplot::
+
+    >>> type(random)
+    <class 'module'>
 
 Now we have the random module loaded, we can access its functions, by
 typing the module name ``random``, followed by a dot, followed by the
