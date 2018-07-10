@@ -4,10 +4,13 @@ When and where
 
 The course is 12 hours total teaching time over three days.
 
-This is homework after the first and second days, each taking about an hour.
+There is homework after the first and second days, each taking about an hour.
 
 Please note the rooms below, we are in a different room for the second and
 third days.
+
+Also notice - we start 30 minutes earlier on the first day, and end one hour
+later on the last day.
 
 * Wednesday July 11th, 9.30am - 12, 2 - 4pm in `Arts Lecture Room 2
   <https://universityofbirmingham.service-now.com/eqpublic/rooms.do?room=dbfdf1974d8d6c008163baecd9deaab9>`_
