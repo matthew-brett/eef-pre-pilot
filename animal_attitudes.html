@@ -64,13 +64,13 @@ converted the data dictionary document to a PDF:</p>
 <p>Display the data frame:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#: Display the data frame</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
-<span class="go">        ID  Q1  Q2a  Q2b  Q3a  Q3b  Q3c  Q3d  Q3e  Q3f   ...    Empstat  qual  \</span>
-<span class="go">0    10150   2    1    2    5    1    1    1    5    3   ...          3     1 ...</span>
-<span class="go">1    10170   1    1    1    1    1    1    5    2    1   ...          3     3 ...</span>
-<span class="go">2    10190   3    2    2    3    1    5    1    5    2   ...          2     2 ...</span>
-<span class="go">3    10210   3    2    3    3    2    3    3    4    2   ...          3     2 ...</span>
-<span class="go">4    10230   3    3    3    2    2    2    3    4    2   ...          3     2 ...</span>
-<span class="go">5    10250   3    2    3    3    2    2    2    4    2   ...          1     1 ...</span>
+<span class="go">        ID  Q1  Q2a  Q2b  Q3a  Q3b  Q3c  Q3d   ...    marstat  access  Income  Broadsheet  MidMarket  Tabloid  NoPpr  weight</span>
+<span class="go">0    10150   2    1    2    5    1    1    1   ...          1       1       3           0          0        0      1  0.6369</span>
+<span class="go">1    10170   1    1    1    1    1    1    5   ...          1       1       5           0          0        0      1  0.5165</span>
+<span class="go">2    10190   3    2    2    3    1    5    1   ...          1       1       5           0          0        0      1  1.7536</span>
+<span class="go">3    10210   3    2    3    3    2    3    3   ...          1       1       4           0          0        1      0  1.2144</span>
+<span class="go">4    10230   3    3    3    2    2    2    3   ...          3       0      -1           0          0        0      1  0.4500</span>
+<span class="go">5    10250   3    2    3    3    2    2    2   ...          1       1      -1           0          0        0      1  1.4883</span>
 <span class="gp">...</span>
 
 <span class="go">[987 rows x 248 columns]</span>
@@ -96,7 +96,7 @@ Politicians / MPs”.  Note as well.</p>
 <p>Use indexing to select make a new data frame containing only these three
 columns from the original data frame.  It will look something like <code class="docutils literal notranslate"><span class="pre">questions</span>
 <span class="pre">=df[</span></code> followed by the names of the columns you just found.  Have a look at
-<a class="reference internal" href="brexit.html"><span class="doc">Analyzing Brexit</span></a> for inspiration.</p>
+<span class="xref std std-doc">brexit</span> for inspiration.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Select only the two columns we found above.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Something like</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#- questions = df[ something here ]</span>
@@ -111,7 +111,7 @@ expected.</p>
 </pre></div>
 </div>
 <p>Rename the columns to <code class="docutils literal notranslate"><span class="pre">&quot;trust_uni&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;trust_protectors&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;trust_politicians&quot;</span></code>.   See <a class="reference internal" href="brexit.html"><span class="doc">Analyzing Brexit</span></a> for inspiration.</p>
+<code class="docutils literal notranslate"><span class="pre">&quot;trust_politicians&quot;</span></code>.   See <span class="xref std std-doc">brexit</span> for inspiration.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Rename the columns of the new data frame to:</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#- &quot;trust_uni&quot;, &quot;trust_protectors&quot;, &quot;trust_politicians&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">questions</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trust_uni&#39;</span><span class="p">,</span> <span class="s1">&#39;trust_protectors&#39;</span><span class="p">,</span> <span class="s1">&#39;trust_politicians&#39;</span><span class="p">]</span>
@@ -125,7 +125,7 @@ expected.</p>
 interactive plots.  If running in the Jupyter Notebook, use <code class="docutils literal notranslate"><span class="pre">%matplotlib</span>
 <span class="pre">inline</span></code>.</p>
 </div>
-<p>Import the plotting library, using the same conventions as in <a class="reference internal" href="brexit.html"><span class="doc">Analyzing Brexit</span></a>:</p>
+<p>Import the plotting library, using the same conventions as in <span class="xref std std-doc">brexit</span>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Import the plotting library</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -215,15 +215,15 @@ trust:</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">(</span><span class="n">trust_uni</span><span class="p">)</span>
-<span class="go">0.35055724417426543</span>
+<span class="go">0.3505572441742654...</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">(</span><span class="n">trust_protectors</span><span class="p">)</span>
-<span class="go">0.33333333333333331</span>
+<span class="go">0.3333333333333333...</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mean</span><span class="p">(</span><span class="n">trust_uni</span><span class="p">)</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">trust_protectors</span><span class="p">)</span>
-<span class="go">0.017223910840932111</span>
+<span class="go">0.01722391084093211...</span>
 </pre></div>
 </div>
 <p>So, there is a difference.  But did this difference come about through some

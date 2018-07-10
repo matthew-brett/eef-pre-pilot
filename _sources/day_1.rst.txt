@@ -2,9 +2,12 @@
 Day 1
 #####
 
-On Wednesday 20th we are in `Room 204, Law Building
-<https://universityofbirmingham.service-now.com/eqpublic/rooms.do?room=b9fd75974d8d6c008163baecd9deaab9>`_
-(R1 on the `UoB campus map`_);
+* 14.00 - 14.45 - getting our data :doc:`brexit`; introducing the problem of
+  proportions.  Are there too few Brexiteers in the survey?.  How would we
+  decide?
+* 14.55 - 15.25 - another problem of proportions.  If a family has 4 children,
+  what is the probability that the family has 3 girls?  A simulation.
+* 15.30 - 16.00 - solving with simulation; :doc:`loops_and_functions`.
 
 *******
 Morning

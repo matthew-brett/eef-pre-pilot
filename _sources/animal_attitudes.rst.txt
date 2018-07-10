@@ -44,13 +44,13 @@ Display the data frame:
 
     >>> #: Display the data frame
     >>> df
-            ID  Q1  Q2a  Q2b  Q3a  Q3b  Q3c  Q3d  Q3e  Q3f   ...    Empstat  qual  \
-    0    10150   2    1    2    5    1    1    1    5    3   ...          3     1 ...
-    1    10170   1    1    1    1    1    1    5    2    1   ...          3     3 ...
-    2    10190   3    2    2    3    1    5    1    5    2   ...          2     2 ...
-    3    10210   3    2    3    3    2    3    3    4    2   ...          3     2 ...
-    4    10230   3    3    3    2    2    2    3    4    2   ...          3     2 ...
-    5    10250   3    2    3    3    2    2    2    4    2   ...          1     1 ...
+            ID  Q1  Q2a  Q2b  Q3a  Q3b  Q3c  Q3d   ...    marstat  access  Income  Broadsheet  MidMarket  Tabloid  NoPpr  weight
+    0    10150   2    1    2    5    1    1    1   ...          1       1       3           0          0        0      1  0.6369
+    1    10170   1    1    1    1    1    1    5   ...          1       1       5           0          0        0      1  0.5165
+    2    10190   3    2    2    3    1    5    1   ...          1       1       5           0          0        0      1  1.7536
+    3    10210   3    2    3    3    2    3    3   ...          1       1       4           0          0        1      0  1.2144
+    4    10230   3    3    3    2    2    2    3   ...          3       0      -1           0          0        0      1  0.4500
+    5    10250   3    2    3    3    2    2    2   ...          1       1      -1           0          0        0      1  1.4883
     ...
     <BLANKLINE>
     [987 rows x 248 columns]
@@ -216,17 +216,17 @@ trust:
 .. nbplot::
 
     >>> mean(trust_uni)
-    0.35055724417426543
+    0.3505572441742654...
 
 .. nbplot::
 
     >>> mean(trust_protectors)
-    0.33333333333333331
+    0.3333333333333333...
 
 .. nbplot::
 
     >>> mean(trust_uni) - mean(trust_protectors)
-    0.017223910840932111
+    0.01722391084093211...
 
 So, there is a difference.  But did this difference come about through some
 random factor in the way people were answering the questions?  Or can we

@@ -44,7 +44,7 @@ In action on the school, fertility data.
     >>> fertility = list(school_fertility['fertility'])
     >>> observed, distribution = linear_permute(school, fertility)
     >>> observed
-    63210.978138184139
+    63210.9781381841...
 
 .. mpl-interactive::
 

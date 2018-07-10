@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Attitudes to animal research" href="animal_attitudes.html" />
-    <link rel="prev" title="Analyzing Brexit" href="brexit.html" />
+    <link rel="prev" title="Where are the Brexiteers?" href="brexit_analysis.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -64,7 +64,7 @@ columns, and variables for rows, where there are 630 variables for each
 country.  So there are 630 rows * the number of countries.  To investigate, we
 first look at the column names:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
-<span class="go">Index([&#39;﻿&quot;Country Name&quot;&#39;, &#39;Country Code&#39;, &#39;Indicator Name&#39;, &#39;Indicator Code&#39;,</span>
+<span class="go">Index([&#39;Country Name&#39;, &#39;Country Code&#39;, &#39;Indicator Name&#39;, &#39;Indicator Code&#39;,</span>
 <span class="go">       &#39;1960&#39;, &#39;1961&#39;, &#39;1962&#39;, &#39;1963&#39;, &#39;1964&#39;, &#39;1965&#39;, &#39;1966&#39;, &#39;1967&#39;, &#39;1968&#39;,</span>
 <span class="go">       &#39;1969&#39;, &#39;1970&#39;, &#39;1971&#39;, &#39;1972&#39;, &#39;1973&#39;, &#39;1974&#39;, &#39;1975&#39;, &#39;1976&#39;, &#39;1977&#39;,</span>
 <span class="go">       &#39;1978&#39;, &#39;1979&#39;, &#39;1980&#39;, &#39;1981&#39;, &#39;1982&#39;, &#39;1983&#39;, &#39;1984&#39;, &#39;1985&#39;, &#39;1986&#39;,</span>
@@ -77,13 +77,13 @@ first look at the column names:</p>
 </div>
 <p>Next we look at the data frame itself:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
-<span class="go">       ﻿&quot;Country Name&quot; Country Code  \</span>
-<span class="go">0           Arab World          ARB ...</span>
-<span class="go">1           Arab World          ARB ...</span>
-<span class="go">2           Arab World          ARB ...</span>
-<span class="go">3           Arab World          ARB ...</span>
-<span class="go">4           Arab World          ARB ...</span>
-<span class="go">5           Arab World          ARB ...</span>
+<span class="go">       Country Name Country Code ...</span>
+<span class="go">0        Arab World          ARB ...</span>
+<span class="go">1        Arab World          ARB ...</span>
+<span class="go">2        Arab World          ARB ...</span>
+<span class="go">3        Arab World          ARB ...</span>
+<span class="go">4        Arab World          ARB ...</span>
+<span class="go">5        Arab World          ARB ...</span>
 <span class="gp">...</span>
 
 <span class="go">[165690 rows x 63 columns]</span>
@@ -96,7 +96,7 @@ The code is <code class="docutils literal notranslate"><span class="pre">GBR</sp
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># We select only the UK rows</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GBR&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gb</span>
-<span class="go">       ﻿&quot;Country Name&quot; Country Code  \</span>
+<span class="go">          Country Name Country Code ...</span>
 <span class="go">158130  United Kingdom          GBR ...</span>
 <span class="go">158131  United Kingdom          GBR ...</span>
 <span class="go">158132  United Kingdom          GBR ...</span>
@@ -121,7 +121,7 @@ fields:</p>
 whole text field with the variable description.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># This will be different from above when working in the Notebook</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gb</span>
-<span class="go">       ﻿&quot;Country Name&quot; Country Code  \</span>
+<span class="go">          Country Name Country Code ...</span>
 <span class="go">158130  United Kingdom          GBR ...</span>
 <span class="go">158131  United Kingdom          GBR ...</span>
 <span class="go">158132  United Kingdom          GBR ...</span>
@@ -282,11 +282,11 @@ give a random sample of fertility values.  So, here is one trial:</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">one_product</span><span class="p">(</span><span class="n">school</span><span class="p">,</span> <span class="n">fertility</span><span class="p">)</span>
-<span class="go">75196.897957675363</span>
+<span class="go">75196.8979576753...</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">one_product</span><span class="p">(</span><span class="n">school</span><span class="p">,</span> <span class="n">fertility</span><span class="p">)</span>
-<span class="go">72668.685532226926</span>
+<span class="go">72668.6855322269...</span>
 </pre></div>
 </div>
 <p>Now let’s build up the sampling distribution:</p>
@@ -317,7 +317,7 @@ give a random sample of fertility values.  So, here is one trial:</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="brexit.html" title="previous chapter">Analyzing Brexit</a></li>
+      <li>Previous: <a href="brexit_analysis.html" title="previous chapter">Where are the Brexiteers?</a></li>
       <li>Next: <a href="animal_attitudes.html" title="next chapter">Attitudes to animal research</a></li>
   </ul></li>
 </ul>

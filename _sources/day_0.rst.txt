@@ -2,26 +2,30 @@
 Day 0
 #####
 
-*******
-Morning
-*******
+************************************
+Morning - data analysis is difficult
+************************************
+
+The problem
 
 * 10.00 - 10.45 - introduction to the course - :download:`talk slides
   <intro_talk_slides.pdf>` [#get-source]_.
-* 10.55 - 12.00 - :doc:`jupyter_intro` (see :doc:`using_the_notebooks`).
+* 10.45 - 11.00 - :doc:`the Brexit problem <brexit_problem>`.
+* 11.00 - 11.10 - break.
+* 11.10 - 11.40 - work on the Brexit problem.
+* 11.40 - 12.00 - feed back.
 
 2 hour break.
 
-*********
-Afternoon
-*********
+************************************
+Afternoon - expressing steps in code
+************************************
 
-* 14.00 - 14.45 - getting our data :doc:`brexit`; introducing the problem of
-  proportions.  Are there too few Brexiteers in the survey?.  How would we
-  decide?
-* 14.55 - 15.25 - another problem of proportions.  If a family has 4 children,
-  what is the probability that the family has 3 girls?  A simulation.
-* 15.30 - 16.00 - solving with simulation; :doc:`loops_and_functions`.
+* 14.00 - 14.55 - :doc:`python_and_jupyter`.
+* 15.05 - 16.00 - the Brexit problem using Python and Jupyter.
+
+There's an expanded version of the Brexit analyis at :doc:`brexit_analysis`.
+
 
 .. [#get-source] Source files for building the slides, and source for all the
    pages in this website are always available in the `course Github
