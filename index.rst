@@ -22,14 +22,15 @@ algorithms and data analysis at the University of Birmingham.
     :hidden:
 
     schedule
-    brexit
+    brexit_problem
+    brexit_analysis
     school_and_fertility
     animal_attitudes
     number_of_girls
     day_0
     day_1
     day_2
-    jupyter_intro
+    python_and_jupyter
     loops_and_functions
     for_loops
     using_the_notebooks
