@@ -80,7 +80,7 @@ Politicians / MPs".  Note as well.
 Use indexing to select make a new data frame containing only these three
 columns from the original data frame.  It will look something like ``questions
 =df[`` followed by the names of the columns you just found.  Have a look at
-:doc:`brexit` for inspiration.
+:doc:`brexit_analysis` for inspiration.
 
 .. nbplot::
 
@@ -99,7 +99,7 @@ expected.
     Index(['Q7_1', 'Q7_2', 'Q7_6'], dtype='object')
 
 Rename the columns to ``"trust_uni"``, ``"trust_protectors"``,
-``"trust_politicians"``.   See :doc:`brexit` for inspiration.
+``"trust_politicians"``.   See :doc:`brexit_analysis` for inspiration.
 
 .. nbplot::
 
@@ -111,7 +111,8 @@ Rename the columns to ``"trust_uni"``, ``"trust_protectors"``,
 
 .. mpl-interactive::
 
-Import the plotting library, using the same conventions as in :doc:`brexit`:
+Import the plotting library, using the same conventions as in
+:doc:`brexit_analysis`:
 
 .. nbplot::
 

@@ -4,9 +4,9 @@ Comparing two groups with permutation testing
 
 .. code-links:: clear
 
-We return to the Brexit age data from :doc:`brexit`.
+We return to the Brexit age data from :doc:`brexit_problem`.
 
-Here's the data from the processing we did in :doc:`brexit`:
+Here's the data from the processing we did in :doc:`brexit_analysis`:
 
 * :download:`remain_leave.csv`.
 
