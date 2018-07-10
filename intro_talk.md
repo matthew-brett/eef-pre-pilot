@@ -146,7 +146,12 @@ Richard Feynman - found on his blackboard after his death.
 
 # Plan from here
 
-* Introduction to the Jupyter Notebook;
-* Some questions from some data;
-* Thinking about chance;
-* You do the logic, the computer does the work.
+* A dataset, and a problem.
+* Reproducibility is hard.
+* Algorithms as description and prescription.
+* An introduction to Python and data analysis.
+* Thinking about chance with simulation.
+* Using programming for simulation.
+* A solution to our problem.
+* Another problem, another simulation, another answer.
+* Exploring your own data.
