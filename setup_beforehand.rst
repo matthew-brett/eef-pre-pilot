@@ -2,6 +2,12 @@
 Setup beforehand
 ################
 
+The instructions below are if you have your own laptop, and it has
+a reasonable amount of disk space.
+
+If you are borrowing a laptop, or your laptop does not have much space, then
+follow :doc:`these instructions <slim_setup>`.
+
 We are going to use a standard data science toolkit to do our analyses.  The
 toolkit is the Anaconda Python distribution, which is provides simple
 installers that get you nearly all of the common packages you need to get

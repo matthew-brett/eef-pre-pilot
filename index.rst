@@ -44,3 +44,4 @@ algorithms and data analysis at the University of Birmingham.
     linear
     samples_and_spread
     paired
+    slim_setup
