@@ -1,0 +1,4 @@
+nb2plots
+pandas
+matplotlib
+ghp-import
