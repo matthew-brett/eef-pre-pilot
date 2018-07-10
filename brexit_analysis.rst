@@ -1,35 +1,10 @@
-################
-Analyzing Brexit
-################
+#########################
+Where are the Brexiteers?
+#########################
 
 .. code-links:: clear
 
-Every year, the `Hansard Society
-<https://www.hansardsociety.org.uk/research/audit-of-political-engagement>`_
-sponsors a survey on political engagement in the UK.
-
-They put topical questions in each survey.  For the 2016 / 7 survey, they
-asked about how people voted in the Brexit referendum.
-
-Luckily, they make the data freely available online for us to analyze.
-
-You can get the data for yourself from the UK Data Service:
-https://discover.ukdataservice.ac.uk/catalogue/?sn=8183.
-
-To save you a tiny bit of work, I've made an unchanged copy of the
-"tab-delimited" data file for you to download directly. I've also made a copy
-of the document describing the questions they ask and the way that they have
-recorded the answers in the data file.  This is often called the "data
-dictionary".  It was originally in Rich Text Format, but I have converted to
-PDF for convenience.  It is otherwise identical to the file you will find at
-the UK Data Service.
-
-Download these files to the working directory for your Jupyter Notebook:
-
-* :download:`tab-delimited data file
-  <audit_of_political_engagement_14_2017.tab>`;
-* :download:`data dictionary PDF file
-  <audit_of_political_engagement_14_2017_ukda_data_dictionary.pdf>`.
+See: :doc:`brexit_problem` for background.
 
 We are going to load this data using the Pandas_ package for data analysis.
 
@@ -43,7 +18,7 @@ use the package:
 
 .. nbplot::
 
-    >>> import pandas as pd
+    >>> import pandas
 
 The data file that you just downloaded should be called
 ``audit_of_political_engagement_14_2017.tab``.  We load the data file into
@@ -51,13 +26,19 @@ memory with Pandas:
 
 .. nbplot::
 
-    >>> # Notice we use "pd" to refer to the Pandas package (see above)
-    >>> audit_data = pd.read_table('audit_of_political_engagement_14_2017.tab')
+    >>> audit_data = pandas.read_table('audit_of_political_engagement_14_2017.tab')
 
-We now have something called a "data frame".  This is a table, rather like a
-spreadsheet, where there is one row per person surveyed, and one column for
-each question in the survey.  The columns have helpful names that you can read
-about in the data dictionary:
+We now have something called a "data frame":
+
+.. nbplot::
+
+    >>> type(audit_data)
+    pandas.core.frame.DataFrame
+
+The ``DataFrame`` type of object is a table, rather like a spreadsheet, where
+there is one row per person surveyed, and one column for each question in the
+survey.  The columns have helpful names that you can read about in the data
+dictionary:
 
 .. nbplot::
 
@@ -85,26 +66,6 @@ dictionary:
            'intten', 'cx_971_980', 'serial', 'week', 'wts', 'numage', 'weight0',
            'sgrade_grp', 'age_grp', 'region2'],
           dtype='object', length=370)
-
-For the moment, we will focus on two questions labeled ``cut15``
-and ``numage``.  ``cut15`` is the question about Brexit. The data dictionary
-has the *variable label* "CUT15 - How did you vote on the question 'Should the
-United Kingdom remain a member of the European Union or leave the European
-Union'?".  The recorded values run from 1 through 6 and have the following
-labels:
-
-.. code-block:: none
-
-    Value label information for cut15
-    Value = 1.0    Label = Remain a member of the European Union
-    Value = 2.0    Label = Leave the European Union
-    Value = 3.0    Label = Did not vote
-    Value = 4.0    Label = Too young
-    Value = 5.0    Label = Can't remember
-    Value = 6.0    Label = Refused
-
-We also want the variable ``numage``; this is the age of the respondent in
-years.
 
 To reduce clutter, we first make a new data frame that just has the two
 questions we are interested in:
@@ -156,13 +117,38 @@ Matplotlib_.
 .. mpl-interactive::
 
 Remember that we did an "import" for the Pandas package above.  Now we import
-part of ``matplotlib``, and again, we give it a short memorable name:
+part of ``matplotlib``.
 
 .. nbplot::
 
-    >>> import matplotlib.pyplot as plt
+    >>> import matplotlib.pyplot
 
-Here is a histogram of the respondents' ages:
+What type of thing is ``matplotlib.pyplot``?
+
+.. nbplot::
+
+    >>> type(matplotlib.pyplot)
+    module
+
+We use the ``hist`` function in ``matplotlib.pyplot`` to plot a histogram of
+the respondents' ages:
+
+.. nbplot::
+
+    >>> matplotlib.pyplot.hist(brexit_age['age'])
+    (...)
+
+It's very boring to keep typing ``matplotlib.pyplot``, so we can give it a
+shorter name:
+
+.. nbplot::
+
+    >>> # Set the name "plt" to point to the "matplotlib.pyplot" module
+    >>> plt = matplotlib.pyplot
+    >>> type(plt)
+    module
+
+Now we can be more concise:
 
 .. nbplot::
 
@@ -173,13 +159,59 @@ There appear to be a few subjects with age of 0.
 
 It looks as if the survey coders are using the value 0 to mean that the person
 did not state their age.  We will have to clean that up.  We do that by
-selecting the cases that have ages not equal to 0:
+selecting the cases that have ages not equal to 0.
+
+First we get the age column into its own variable.
 
 .. nbplot::
 
-    >>> # Select rows where the age is not equal to 0
-    >>> brexit_age = brexit_age[brexit_age['age'] != 0]
-    >>> brexit_age
+    >>> age_column = brexit_age['age']
+    >>> age_column
+
+This variable is of type ``Series``:
+
+.. nbplot::
+
+    >>> type(age_column)
+    pandas.core.series.Series
+
+The ``Series`` represents the column from the data frame.  Like the data
+frame, it has row (value) labels.  In our case, these are just numbers from 0.
+
+We can convert this series, to another series that has the value ``True`` when
+the age is *not equal to 0*, and ``False`` if it is equal to 0:
+
+.. nbplot::
+
+    >>> # Read RHS as "age_column value not equal to 0"
+    >>> age_not_0 = age_column != 0
+    >>> age_not_0
+    0        True
+    1        True
+    2        True
+    3        True
+    4        True
+    5       False
+    6        True
+    7        True
+    8        True
+    9        True
+    10      False
+    ...
+    1770     True
+    Name: age, Length: 1771, dtype: bool
+
+This is called a *boolean vector*, because it is a sequence of *boolean*
+values (``True`` or ``False``).  We can use this to select rows in the data
+frame where the value is ``True``, and throw away the rows where the value is
+``False``.  To do this, we use the ``loc`` function attached to the data
+frame.  It *locates* values:
+
+.. nbplot::
+
+    >>> # Select rows in the data frame where the age is not equal to 0
+    >>> brexit_good_age = brexit_age.loc[age_not_0]
+    >>> brexit_good_age
           age  brexit
     0      37       1
     1      55       1
@@ -202,7 +234,9 @@ that 1 is the code for a No vote:
 .. nbplot::
 
     >>> # Select the cases who say they voted No (Remain)
-    >>> remainers = brexit_age[brexit_age['brexit'] == 1]
+    >>> # First, make a boolean vector, True for remain row, False otherwise.
+    >>> is_remain = brexit_good_age['brexit'] == 1
+    >>> remainers = brexit_good_age.loc[is_remain]
     >>> remainers
           age  brexit
     0      37       1
@@ -219,7 +253,8 @@ Next we make a new data frame for those who claimed to vote Yes (leave) (code
 
 .. nbplot::
 
-    >>> brexiteers = brexit_age[brexit_age['brexit'] == 2]
+    >>> is_leave = brexit_good_age['brexit'] == 2
+    >>> brexiteers = brexit_good_age.loc[is_leave]
     >>> brexiteers
           age  brexit
     2      71       2
@@ -247,11 +282,8 @@ Now for the proportion:
     >>> len(brexiteers) / (len(brexiteers) + len(remainers))
     0.4114068441064639
 
-Let us remind ourselves of the `final referendum vote percentages
-<https://www.electoralcommission.org.uk/find-information-by-subject/elections-and-referendums/past-elections-and-referendums/eu-referendum/electorate-and-count-information>`_:
-
-* Remain: 48.1%
-* Leave: 51.9%
+As we saw in :doc:`brexit_problem`, the proportion of Leave voters in the
+referendum was 51.9%.  That seems a way off.  Is it too far off?
 
 Now let's have a look at the distribution of ages for the Remain voters:
 
@@ -275,14 +307,14 @@ Leave cases together into one long data frame:
 
 .. nbplot::
 
-    >>> remain_leave = pd.concat([remainers, brexiteers])
+    >>> remain_leave = pandas.concat([remainers, brexiteers])
     >>> len(remain_leave)
     1315
 
 Next we save to a simple text file so we can load it later.  The format is
 CSV, which stands for Comma Separated Values |--| commas separate the values
-within each row.  In saving, we drop off the first implicit column, with the
-case numbers:
+within each row.  In saving, we drop the index from the data frame, which just
+contains the case numbers:
 
 .. nbplot::
 
@@ -292,7 +324,7 @@ To be safe, we check we can load back that file:
 
 .. nbplot::
 
-    >>> remain_leave_reloaded = pd.read_csv('remain_leave.csv')
+    >>> remain_leave_reloaded = pandas.read_csv('remain_leave.csv')
     >>> remain_leave_reloaded
           age  brexit
     0      37       1
