@@ -68,24 +68,18 @@ a programming language with a easy-to-read syntax that is widely used for
 teaching, and for data analysis.  It’s very popular in academia, and in
 industry, especially for data analysis.</p>
 </div>
-<div class="section" id="reading-code">
-<h2>Reading code<a class="headerlink" href="#reading-code" title="Permalink to this headline">¶</a></h2>
-<p>When you learn programming, and even when you get a lot of experience, it is
-useful to read to yourself what the code is doing.</p>
-<p>In the cell above, we are <em>setting</em> a <em>variable</em>.</p>
-<p>When we set a variable, the statement has two parts.  There is the Left Hand
-Side (or LHS), to the left of the equals sign.  In our case the LHS is <code class="docutils literal notranslate"><span class="pre">a</span></code>.
-<code class="docutils literal notranslate"><span class="pre">a</span></code> is a <em>name</em>, that we are giving to the <em>contents</em> from the Right Hand
-Side (RHS)</p>
-<p>The RHS is the number <code class="docutils literal notranslate"><span class="pre">10</span></code>.  We can read the statement <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">10</span></code> in a
-verbose way as “Make the name <code class="docutils literal notranslate"><span class="pre">a</span></code> refer to the number <code class="docutils literal notranslate"><span class="pre">10</span></code>.  After this
-statement, we can say that <em>variable</em> (name) <code class="docutils literal notranslate"><span class="pre">a</span></code> has <em>value</em> (refers to) the
-number <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
-<p>When working on code, we often want to see the values of variables, and the
-Notebook makes it easy to do that. We put the variable whose value we want to
-see on its own at the end of a cell. Here the variable is a Right Hand Side,
-without a Left Hand Side.  The Notebook detects that we have done that, and
-shows us the value.  Here we display the value of the variable <code class="docutils literal notranslate"><span class="pre">a</span></code>:</p>
+<div class="section" id="output-when-the-last-statement-is-an-expression">
+<h2>Output when the last statement is an expression<a class="headerlink" href="#output-when-the-last-statement-is-an-expression" title="Permalink to this headline">¶</a></h2>
+<p>Remember, from <a class="reference internal" href="assignment.html"><span class="doc">Assignment</span></a>, that an expression is a piece of code that
+returns a value.</p>
+<p>When working on code, we often want to see the values of expressions, and
+particularly, we often want to see the contents of variables. The Notebook
+makes it easy to do that.  If the last statement in a code cell is an
+expression (like the Right Hand Side of an assignment), the Notebook will show
+us the value returned from that expression, as <em>Output</em> from the cell.</p>
+<p>For example, let’s say we wanted to see the value of the variable <code class="docutils literal notranslate"><span class="pre">a</span></code>.  The
+code <code class="docutils literal notranslate"><span class="pre">a</span></code> is an expression, that returns the value of the variable <code class="docutils literal notranslate"><span class="pre">a</span></code>.
+So, to see the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> in the Notebook, we can do this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">10</span>
 </pre></div>
@@ -99,37 +93,12 @@ own, so we can see its value. Like this:</p>
 <span class="go">5</span>
 </pre></div>
 </div>
-<p>Now we know how to read the first line as “make the name <code class="docutils literal notranslate"><span class="pre">b</span></code> refer to the
-number <code class="docutils literal notranslate"><span class="pre">5</span></code>.  Read the second line as “show me what the name <code class="docutils literal notranslate"><span class="pre">b</span></code> refers
-to”.</p>
-<p>Time for an exercise:</p>
-<ul class="simple">
-<li>Start a new Notebook;</li>
-<li>Set the name <code class="docutils literal notranslate"><span class="pre">a</span></code> to refer to the number 6</li>
-<li>Set the name <code class="docutils literal notranslate"><span class="pre">c</span></code> to refer to the name <code class="docutils literal notranslate"><span class="pre">a</span></code></li>
-<li>What do you think the name <code class="docutils literal notranslate"><span class="pre">c</span></code> refers to now, when we show it?  Try and
-predict.  Then try showing the value in the Notebook.</li>
-</ul>
-</div>
-<div class="section" id="the-right-hand-side-can-be-an-expression">
-<h2>The Right Hand Side can be an expression<a class="headerlink" href="#the-right-hand-side-can-be-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>We have seen a couple of code cells with the variable (name) on the LHS,
-followed by an equals sign <code class="docutils literal notranslate"><span class="pre">=</span></code>, followed by a RHS, that is a number, <code class="docutils literal notranslate"><span class="pre">10</span></code>
-or <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
-<p>The RHS does not have to be a value, like a number.  It can be an <em>expression</em>
-- some code, that Python understands, that ends up returning a value.</p>
-<p>For example, Python understands the expression <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">6</span></code> to mean “add the
-numbers 5 and 6, and return the result”.</p>
-<p>Try a code cell where you set the name <code class="docutils literal notranslate"><span class="pre">c</span></code> to refer to the result of <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span>
-<span class="pre">6</span></code>.</p>
-<p>Make a code cell where you set the name <code class="docutils literal notranslate"><span class="pre">d</span></code> to refer to the result of <code class="docutils literal notranslate"><span class="pre">(10</span>
-<span class="pre">+</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">4</span></code>.</p>
 </div>
 <div class="section" id="the-notebook-as-a-calculator">
 <h2>The Notebook as a calculator<a class="headerlink" href="#the-notebook-as-a-calculator" title="Permalink to this headline">¶</a></h2>
-<p>The code cell shows output, when it ends with RHS without a LHS.  The RHS can
-be a number, or a variable, as we have seen before, but it can also be an
-<em>expression</em>.  So, we can make a code cell like this:</p>
+<p>The code cell shows output, when it ends with an expression (a RHS without
+a LHS).  The expression can be a number, or a variable, as we have seen before, but
+it can also be something more complicated:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
 <span class="go">4.0</span>
 </pre></div>
@@ -272,52 +241,6 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">my_name</span></code> refers to a string.</p>
 </div>
-<div class="section" id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
-<p>Python has other useful types of data. One very useful type is the <em>list</em>.
-Here is a list of two numbers:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span>
-<span class="go">[10, 4]</span>
-</pre></div>
-</div>
-<p>Notice the square brackets around the list items, and a comma between the
-items.</p>
-<p>What do you think you will get calling <code class="docutils literal notranslate"><span class="pre">len</span></code> on this list? Try it.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Try: len(my_list)</span>
-</pre></div>
-</div>
-<p>You can make an empty list by putting nothing between the brackets:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_empty_list</span>
-<span class="go">[]</span>
-</pre></div>
-</div>
-<p>Another thing we might want to do to a list is append a value.  We can do this
-using the <code class="docutils literal notranslate"><span class="pre">append</span></code> <em>method</em> of the list.  A <em>method</em> is a function attached
-to a value.  This is best seen in action:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span>
-<span class="go">[10, 4, 7]</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span>
-<span class="go">[10, 4, 7, 1]</span>
-</pre></div>
-</div>
-<p>Notice that we <em>call</em> the method using the name of the list - here
-<code class="docutils literal notranslate"><span class="pre">my_list</span></code>, followed by a dot, followed by the name of the method, here
-<code class="docutils literal notranslate"><span class="pre">append</span></code>.  <code class="docutils literal notranslate"><span class="pre">append</span></code> is a function attached to <code class="docutils literal notranslate"><span class="pre">my_list</span></code>.</p>
-<p>Don’t worry about the details at the moment, we will have many chances to get
-used this this idea.</p>
-</div>
-<div class="section" id="careful-of-the-brackets">
-<h2>Careful of the brackets<a class="headerlink" href="#careful-of-the-brackets" title="Permalink to this headline">¶</a></h2>
-<p>You need square brackets - <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code> to make a list.  If you use
-parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> or curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code> - you’ll get something other than
-a list - be careful.</p>
-</div>
 <div class="section" id="set-equal-to-and-test-equal-to">
 <h2>Set equal to and test equal to<a class="headerlink" href="#set-equal-to-and-test-equal-to" title="Permalink to this headline">¶</a></h2>
 <p>We have been setting the values of variables with the variable name (e.g.
@@ -377,20 +300,8 @@ number between 0 and 10 like this:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="exercise">
-<span id="getting-help"></span><h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<p>Using what you have learned above, make a cell that creates an empty list,
-then appends three random numbers between 0 and 100.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Make an empty list.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Make a random number between 0 and 100</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Append it to the list</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Do this three times</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1">#- Show the new list with three numbers.</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>Getting help<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getting-help">
+<span id="id2"></span><h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
 <p>Often we want to know what a function does, or how many arguments it takes.
 The Notebook has a useful feature to help us. Type the name of the function
 you are interested in, followed by <code class="docutils literal notranslate"><span class="pre">?</span></code> and press Shift-Enter. The Notebook
@@ -430,20 +341,16 @@ other things inside the <code class="docutils literal notranslate"><span class="
 <li><a class="reference internal" href="#">Introduction to Python, via Jupyter</a><ul>
 <li><a class="reference internal" href="#a-notebook-has-cells">A Notebook has cells</a></li>
 <li><a class="reference internal" href="#python">Python</a></li>
-<li><a class="reference internal" href="#reading-code">Reading code</a></li>
-<li><a class="reference internal" href="#the-right-hand-side-can-be-an-expression">The Right Hand Side can be an expression</a></li>
+<li><a class="reference internal" href="#output-when-the-last-statement-is-an-expression">Output when the last statement is an expression</a></li>
 <li><a class="reference internal" href="#the-notebook-as-a-calculator">The Notebook as a calculator</a></li>
 <li><a class="reference internal" href="#using-variables">Using variables</a></li>
 <li><a class="reference internal" href="#comments-begin-with-a-hash">Comments begin with a hash (#)</a></li>
 <li><a class="reference internal" href="#strings-contain-text">Strings contain text</a></li>
 <li><a class="reference internal" href="#functions-process-things">Functions process things</a></li>
 <li><a class="reference internal" href="#what-type-of-thing-have-i-got">What type of thing have I got?</a></li>
-<li><a class="reference internal" href="#lists">Lists</a></li>
-<li><a class="reference internal" href="#careful-of-the-brackets">Careful of the brackets</a></li>
 <li><a class="reference internal" href="#set-equal-to-and-test-equal-to">Set equal to and test equal to</a></li>
 <li><a class="reference internal" href="#packages">Packages</a></li>
-<li><a class="reference internal" href="#exercise">Exercise</a></li>
-<li><a class="reference internal" href="#id2">Getting help</a></li>
+<li><a class="reference internal" href="#getting-help">Getting help</a></li>
 </ul>
 </li>
 </ul>
