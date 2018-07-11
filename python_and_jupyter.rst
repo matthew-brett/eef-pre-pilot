@@ -319,67 +319,6 @@ Here ``a`` refers to an integer (whole number).
 
 ``my_name`` refers to a string.
 
-*****
-Lists
-*****
-
-Python has other useful types of data. One very useful type is the *list*.
-Here is a list of two numbers:
-
-.. nbplot::
-
-    >>> my_list = [10, 4]
-    >>> my_list
-    [10, 4]
-
-Notice the square brackets around the list items, and a comma between the
-items.
-
-What do you think you will get calling ``len`` on this list? Try it.
-
-.. nbplot::
-
-    >>> # Try: len(my_list)
-
-You can make an empty list by putting nothing between the brackets:
-
-.. nbplot::
-
-    >>> my_empty_list = []
-    >>> my_empty_list
-    []
-
-Another thing we might want to do to a list is append a value.  We can do this
-using the ``append`` *method* of the list.  A *method* is a function attached
-to a value.  This is best seen in action:
-
-.. nbplot::
-
-    >>> my_list.append(7)
-    >>> my_list
-    [10, 4, 7]
-
-.. nbplot::
-
-    >>> my_list.append(1)
-    >>> my_list
-    [10, 4, 7, 1]
-
-Notice that we *call* the method using the name of the list - here
-``my_list``, followed by a dot, followed by the name of the method, here
-``append``.  ``append`` is a function attached to ``my_list``.
-
-Don't worry about the details at the moment, we will have many chances to get
-used this this idea.
-
-***********************
-Careful of the brackets
-***********************
-
-You need square brackets - ``[`` and ``]`` to make a list.  If you use
-parentheses ``()`` or curly brackets ``{}`` - you'll get something other than
-a list - be careful.
-
 ******************************
 Set equal to and test equal to
 ******************************
@@ -464,20 +403,6 @@ number between 0 and 10 like this:
 
 .. _getting-help:
 
-********
-Exercise
-********
-
-Using what you have learned above, make a cell that creates an empty list,
-then appends three random numbers between 0 and 100.
-
-.. nbplot::
-
-    >>> #- Make an empty list.
-    >>> #- Make a random number between 0 and 100
-    >>> #- Append it to the list
-    >>> #- Do this three times
-    >>> #- Show the new list with three numbers.
 
 ************
 Getting help
