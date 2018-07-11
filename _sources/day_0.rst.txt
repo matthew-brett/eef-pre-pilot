@@ -7,9 +7,9 @@ To start:
 * Get a study number from me;
 * Fill out `this form <https://goo.gl/forms/aiqj5RxoZIT5IGFn2>`_.
 
-************************************
-Morning - data analysis is difficult
-************************************
+***********************************************
+Morning - data analysis is a dangerous business
+***********************************************
 
 The problem
 
