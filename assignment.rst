@@ -2,6 +2,10 @@
 Assignment
 ##########
 
+.. notes
+
+    Started to seem long-winded.  About 15 minutes.
+
 .. what we have to cover
 
    A variable as a name referring to something.
