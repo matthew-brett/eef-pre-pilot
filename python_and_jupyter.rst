@@ -46,40 +46,30 @@ industry, especially for data analysis.
 
 .. what we have to cover
 
-   A variable as a name referring to something.
-   LHS and RHS
    The type of a thing
    Numbers
    Strings
-   Lists
+   # Lists
    True and False
    Functions
-   Sum
+   # Sum
 
-************
-Reading code
-************
+***********************************************
+Output when the last statement is an expression
+***********************************************
 
-When you learn programming, and even when you get a lot of experience, it is
-useful to read to yourself what the code is doing.
+Remember, from :doc:`assignment`, that an expression is a piece of code that
+returns a value.
 
-In the cell above, we are *setting* a *variable*.
+When working on code, we often want to see the values of expressions, and
+particularly, we often want to see the contents of variables. The Notebook
+makes it easy to do that.  If the last statement in a code cell is an
+expression (like the Right Hand Side of an assignment), the Notebook will show
+us the value returned from that expression, as *Output* from the cell.
 
-When we set a variable, the statement has two parts.  There is the Left Hand
-Side (or LHS), to the left of the equals sign.  In our case the LHS is ``a``.
-``a`` is a *name*, that we are giving to the *contents* from the Right Hand
-Side (RHS)
-
-The RHS is the number ``10``.  We can read the statement ``a = 10`` in a
-verbose way as "Make the name ``a`` refer to the number ``10``.  After this
-statement, we can say that *variable* (name) ``a`` has *value* (refers to) the
-number ``10``.
-
-When working on code, we often want to see the values of variables, and the
-Notebook makes it easy to do that. We put the variable whose value we want to
-see on its own at the end of a cell. Here the variable is a Right Hand Side,
-without a Left Hand Side.  The Notebook detects that we have done that, and
-shows us the value.  Here we display the value of the variable ``a``:
+For example, let's say we wanted to see the value of the variable ``a``.  The
+code ``a`` is an expression, that returns the value of the variable ``a``.
+So, to see the value of ``a`` in the Notebook, we can do this:
 
 .. nbplot::
 
@@ -98,45 +88,13 @@ own, so we can see its value. Like this:
     >>> b
     5
 
-Now we know how to read the first line as "make the name ``b`` refer to the
-number ``5``.  Read the second line as "show me what the name ``b`` refers
-to".
-
-Time for an exercise:
-
-* Start a new Notebook;
-* Set the name ``a`` to refer to the number 6
-* Set the name ``c`` to refer to the name ``a``
-* What do you think the name ``c`` refers to now, when we show it?  Try and
-  predict.  Then try showing the value in the Notebook.
-
-****************************************
-The Right Hand Side can be an expression
-****************************************
-
-We have seen a couple of code cells with the variable (name) on the LHS,
-followed by an equals sign ``=``, followed by a RHS, that is a number, ``10``
-or ``5``.
-
-The RHS does not have to be a value, like a number.  It can be an *expression*
-- some code, that Python understands, that ends up returning a value.
-
-For example, Python understands the expression ``5 + 6`` to mean "add the
-numbers 5 and 6, and return the result".
-
-Try a code cell where you set the name ``c`` to refer to the result of ``5 +
-6``.
-
-Make a code cell where you set the name ``d`` to refer to the result of ``(10
-+ 5 + 1) / 4``.
-
 ****************************
 The Notebook as a calculator
 ****************************
 
-The code cell shows output, when it ends with RHS without a LHS.  The RHS can
-be a number, or a variable, as we have seen before, but it can also be an
-*expression*.  So, we can make a code cell like this:
+The code cell shows output, when it ends with an expression (a RHS without
+a LHS).  The expression can be a number, or a variable, as we have seen before, but
+it can also be something more complicated:
 
 .. nbplot::
 

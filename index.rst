@@ -45,3 +45,4 @@ algorithms and data analysis at the University of Birmingham.
     linear
     samples_and_spread
     slim_setup
+    assignment
