@@ -46,3 +46,5 @@ algorithms and data analysis at the University of Birmingham.
     samples_and_spread
     slim_setup
     assignment
+    three_girls
+    print_if_for
