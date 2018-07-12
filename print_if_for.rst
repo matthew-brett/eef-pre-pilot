@@ -164,3 +164,7 @@ this:
   ``i``;
 
 and so on.
+
+.. counter in exercise
+   count numbers between 0 and 99 divisible by both 2 and 7
+   sum of all numbers not divisible by 5
