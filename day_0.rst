@@ -32,6 +32,8 @@ Afternoon - expressing steps in code
 
 There's an expanded version of the Brexit analysis at :doc:`brexit_analysis`.
 
+The Notebook I typed in in class is :download:`actual_brexit_notebook.ipynb`.
+
 ********
 Homework
 ********
