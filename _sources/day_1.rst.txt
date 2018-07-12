@@ -26,13 +26,14 @@ Afternoon - probability and simulation
 Homework
 ********
 
-* Download the notebook from the link at top of :doc:`three_girls` - it's
+* Download the notebook from the link at top of :doc:`three_girls` - it's a
   slightly modified solution to the three girls problem we were working on
   today.   Make a copy, that you are going to modify.
-* Modify the notebook to give the probability of 2 girls.  What is that?
-* Make another copy of the Notebook for this problem.  The actual probability
-  of having a male child is not 0.5 but 0.513. [#male-births]_.  To do a
-  better simulation, we need to modify the Notebook to give a 0.513
+* Modify the notebook to give the probability of 2 girls, instead of 3 girls.
+  What is that?
+* Make another copy of the original Notebook for the next problem.  The actual
+  probability of having a male child is not 0.5 but 0.513. [#male-births]_.
+  To do a better simulation, we need to modify the Notebook to give a 0.513
   probability of ``"B"`` and a 0.487 probability of ``"G"``. You can't easily
   use ``random.choice`` for this, but you could an expression like this to
   decide if it is a *girl*::
