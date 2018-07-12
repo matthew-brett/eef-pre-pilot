@@ -31,6 +31,8 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="day-1">
@@ -53,24 +55,47 @@ what is the probability that the family has 3 girls?  A simulation.</li>
 <li>back for <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in <a class="reference internal" href="print_if_for.html"><span class="doc">Print, If and For</span></a>.</li>
 <li>lists in <a class="reference internal" href="lists.html"><span class="doc">Lists</span></a>.</li>
 <li>solving with simulation; <a class="reference internal" href="three_girls.html"><span class="doc">Three girls</span></a>;</li>
-<li><a class="reference internal" href="functions.html"><span class="doc">Functions</span></a>.</li>
-<li>back to Brexit.  Formulating the null hypothesis.  The population and the
-sample; parameter and statistic. Simulating samples, and therefore,
-statistics.  The sampling distribution.  Has the poll taken a random
-sample of Brexit voters? <a class="reference internal" href="brexit_proportions_exercise.html"><span class="doc">Testing Brexit Proportions</span></a>.</li>
-<li>the age distribution problem.  The mean as a statistic.  Null hypothesis
-comparing distributions.  <a class="reference internal" href="more_on_lists.html"><span class="doc">More on working with lists</span></a>.</li>
-<li><a class="reference internal" href="brexit_ages.html"><span class="doc">Comparing two groups with permutation testing</span></a> on the Brexit data.</li>
 </ul>
 </div>
 <div class="section" id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
-<p>TBA</p>
+<ul>
+<li><p class="first">Download the notebook from the link at top of <a class="reference internal" href="three_girls.html"><span class="doc">Three girls</span></a> - it’s
+slightly modified solution to the three girls problem we were working on
+today.   Make a copy, that you are going to modify.</p>
+</li>
+<li><p class="first">Modify the notebook to give the probability of 2 girls.  What is that?</p>
+</li>
+<li><p class="first">Make another copy of the Notebook for this problem.  The actual probability
+of having a male child is not 0.5 but 0.513. <a class="footnote-reference" href="#male-births" id="id1">[1]</a>.  To do a
+better simulation, we need to modify the Notebook to give a 0.513
+probability of <code class="docutils literal notranslate"><span class="pre">&quot;B&quot;</span></code> and a 0.487 probability of <code class="docutils literal notranslate"><span class="pre">&quot;G&quot;</span></code>. You can’t easily
+use <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> for this, but you could an expression like this to
+decide if it is a boy:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">0.513</span>
+</pre></div>
+</div>
+<p>Modify of this copy of the Notebook to use something like this.  You should
+find that your estimate of the proportion of 3-girl families drops slightly,
+because girls are slightly less common than boys.</p>
+</li>
+<li><p class="first">[more detail in a second on the last part]</p>
+</li>
+</ul>
+<table class="docutils footnote" frame="void" id="male-births" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://www.gov.uk/government/statistics/gender-ratios-at-birth-in-great-britain-2010-to-2014">Official UK government statistics</a>
+give the birth ratio as 105.3. This the number of boys born for every 100
+girls.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -123,7 +148,7 @@ comparing distributions.  <a class="reference internal" href="more_on_lists.html
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
       
       |
       <a href="_sources/day_1.rst.txt"
