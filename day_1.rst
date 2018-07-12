@@ -29,17 +29,20 @@ Homework
 * Download the notebook from the link at top of :doc:`three_girls` - it's
   slightly modified solution to the three girls problem we were working on
   today.   Make a copy, that you are going to modify.
-* The actual probability of having a male child is not 0.5 but 0.513.
-  [#male-births]_.  To do a better simulation, we need to modify the Notebook
-  to give a 0.513 probability of ``"B"`` and a 0.487 probability of ``"G"``.
-  You can't easily use ``random.choice`` for this, but you could an expression
-  like this to decide if it is a boy::
+* Modify the notebook to give the probability of 2 girls.  What is that?
+* Make another copy of the Notebook for this problem.  The actual probability
+  of having a male child is not 0.5 but 0.513. [#male-births]_.  To do a
+  better simulation, we need to modify the Notebook to give a 0.513
+  probability of ``"B"`` and a 0.487 probability of ``"G"``. You can't easily
+  use ``random.choice`` for this, but you could an expression like this to
+  decide if it is a boy::
 
     random.uniform(0, 1) <= 0.513
 
-  Modify the Notebook to use something like this.  You should find that your
-  estimate of the proportion of 3-girl families drops slightly, because girls
-  are slightly less common than boys.
+  Modify of this copy of the Notebook to use something like this.  You should
+  find that your estimate of the proportion of 3-girl families drops slightly,
+  because girls are slightly less common than boys.
+* [more detail in a second on the last part]
 
 .. [#male-births] `Official UK government statistics
    <https://www.gov.uk/government/statistics/gender-ratios-at-birth-in-great-britain-2010-to-2014>`_
