@@ -67,7 +67,7 @@ within the Notebook.</p>
 </div>
 <p>A coin toss!</p>
 <p>Now we have everything we need to solve the problem:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Make a counter to store how many times we have 3 girls</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Make list to store counts of girls in each family</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">girl_counts</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
@@ -79,9 +79,13 @@ within the Notebook.</p>
 <span class="gp">... </span>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="n">child</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;GB&#39;</span><span class="p">)</span>
 <span class="gp">... </span>        <span class="n">family</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="n">girl_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">family</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="c1"># Store the number of girls in this family</span>
+<span class="gp">... </span>    <span class="n">n_girls</span> <span class="o">=</span> <span class="n">family</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">girl_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_girls</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span> <span class="o">=</span> <span class="n">girl_counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Get the number of families with 3 girls</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n_with_3</span> <span class="o">=</span> <span class="n">girl_counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span> <span class="o">=</span> <span class="n">n_with_3</span> <span class="o">/</span> <span class="mi">10000</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span>
