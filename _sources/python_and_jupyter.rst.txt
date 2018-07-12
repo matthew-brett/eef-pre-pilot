@@ -2,6 +2,15 @@
 Introduction to Python, via Jupyter
 ###################################
 
+.. notes
+
+    Too long.  Need breaks for exercises.  Even then, doesn't seem motivated
+    properly.  Considered not teaching this, and going straight to Pandas /
+    Brexit, but that feels too rushed and magical.
+
+    In fact needed a) lists (for data frame indexing, to get columns) and !=
+    for boolean vector.
+
 .. code-links:: clear
 
 This is a Jupyter Notebook.
