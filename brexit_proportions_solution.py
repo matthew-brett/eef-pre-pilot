@@ -1,6 +1,6 @@
 # ## Testing Brexit Proportions
 #
-# If you look back at brexit, you will see that we found:
+# If you look back at [Analyzing Brexit](https://matthew-brett.github.io/les-pilot/brexit.html), you will see that we found:
 #
 # * 541 people who said they voted to Leave the EU;
 #
