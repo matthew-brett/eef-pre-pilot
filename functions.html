@@ -1,0 +1,169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Functions &#8212; Tutorials on imaging, computing and mathematics</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Three girls" href="three_girls_no_lists.html" />
+    <link rel="prev" title="Lists" href="lists.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference download internal" href="functions.ipynb">Download this page as a Jupyter notebook (no outputs)</a>.</li>
+</ul>
+<p>Have already seen functions in action, such as <code class="docutils literal notranslate"><span class="pre">len</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code>.</p>
+<p>These are functions that Python provides for us.</p>
+<p>We can also write our own functions.</p>
+<p>We’re going to wrap up our logic for the coin toss into a function, and call
+the function <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code>.  Like <code class="docutils literal notranslate"><span class="pre">random.random</span></code> our function <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code>
+will accept no arguments.  It will return a 0 50% of the time and a 1 50% of
+the time.</p>
+<p>We make a function like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">coin_toss</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="n">random_no</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">random_no</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">our_result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">our_result</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">our_result</span>
+</pre></div>
+</div>
+<p>The function starts with the word <code class="docutils literal notranslate"><span class="pre">def</span></code> which tells Python we are defining a
+function.  Next follows the name of the function, followed by, in our case,
+parentheses.  You specify what arguments the function should have, in the
+parentheses. In our case, our function as no arguments, so there is nothing
+between the parentheses.</p>
+<p>Next there follows a series of statements that are indented.  These statements
+are the <em>body</em> of the function.  They are the code that gets run when the
+function gets called.</p>
+<p>We return the result with the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement.  Here we are returning a 0
+if a random number was &lt; 0.5, and a 1 otherwise.</p>
+<p>Let’s call the function a few times to see if the results are plausible:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Notice, we pass no arguments</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coin_toss</span><span class="p">()</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coin_toss</span><span class="p">()</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coin_toss</span><span class="p">()</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>Up until now, we’ve assumed that the chance that a child is a boy is 0.5.  Now
+assume the proportion of boys born in the UK is 0.513 <a href="#id3"><span class="problematic" id="id4"><span id="id1"></span>[#male-births]_</span></a>.</p>
+<p>Here is a new copy of the <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code> function, but renamed.  Like the
+<code class="docutils literal notranslate"><span class="pre">coin_toss</span></code> function, it returns 0 50% of the time, and 1 the rest of the
+time.  Modify the function to return 0 (for a boy) 51.3% of the time, and 1
+(for a girl) 48.7% of the time:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">girl_or_boy</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="c1"># Return 1 for a girl, 0 for a boy</span>
+<span class="gp">... </span>    <span class="n">random_no</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">random_no</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">our_result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">our_result</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">our_result</span>
+</pre></div>
+</div>
+<p>You can try your function out a few times with the cell below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">girl_or_boy</span><span class="p">()</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Functions</a><ul>
+<li><a class="reference internal" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="lists.html" title="previous chapter">Lists</a></li>
+      <li>Next: <a href="three_girls_no_lists.html" title="next chapter">Three girls</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/functions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017-18, Matthew Brett.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/functions.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

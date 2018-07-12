@@ -17,8 +17,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Print, If and For" href="print_if_for.html" />
-    <link rel="prev" title="Assignment" href="assignment.html" />
+    <link rel="prev" title="Functions" href="functions.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -63,20 +62,26 @@ within the Notebook.</p>
 <p>A coin toss!</p>
 <p>Now we have everything we need to solve the problem:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Make a counter to store how many times we have 3 girls</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">girl_counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">counter_3girls</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Make 10000 families</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="c1"># Make one family</span>
-<span class="gp">... </span>    <span class="n">family</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="c1"># A counter to store how many girs in this family</span>
+<span class="gp">... </span>    <span class="n">counter_girls</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">... </span>    <span class="c1"># Have 4 children</span>
 <span class="gp">... </span>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-<span class="gp">... </span>        <span class="n">child</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;GB&#39;</span><span class="p">)</span>
-<span class="gp">... </span>        <span class="n">family</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="n">girl_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">family</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="n">coin</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;HT&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">coin</span> <span class="o">==</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">counter_girls</span> <span class="o">=</span> <span class="n">counter_girls</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span> <span class="o">=</span> <span class="n">girl_counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span>
+<span class="gp">... </span>    <span class="c1"># Increase counter if this is a 3 girl family</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">counter_girls</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">counter_3girls</span> <span class="o">=</span> <span class="n">counter_3girls</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span> <span class="o">=</span> <span class="n">counter_3girls</span> <span class="o">/</span> <span class="mi">10000</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proportion</span>
@@ -94,15 +99,14 @@ within the Notebook.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="assignment.html" title="previous chapter">Assignment</a></li>
-      <li>Next: <a href="print_if_for.html" title="next chapter">Print, If and For</a></li>
+      <li>Previous: <a href="functions.html" title="previous chapter">Functions</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/three_girls.rst.txt"
+      <li><a href="_sources/three_girls_no_lists.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -130,7 +134,7 @@ within the Notebook.</p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/three_girls.rst.txt"
+      <a href="_sources/three_girls_no_lists.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

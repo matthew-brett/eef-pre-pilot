@@ -49,19 +49,24 @@ Now we have everything we need to solve the problem:
 .. nbplot::
 
     >>> # Make a counter to store how many times we have 3 girls
-    >>> girl_counts = []
+    >>> counter_3girls = 0
 
     >>> # Make 10000 families
     >>> for i in range(10000):
     ...     # Make one family
-    ...     family = []
+    ...     # A counter to store how many girs in this family
+    ...     counter_girls = 0
     ...     # Have 4 children
     ...     for j in range(4):
-    ...         child = random.choice('GB')
-    ...         family.append(child)
-    ...     girl_counts.append(family.count('G'))
+    ...         coin = random.choice('HT')
+    ...         if coin == 'H':
+    ...             counter_girls = counter_girls + 1
     ...
-    >>> proportion = girl_counts.count(3) / 10000
+    ...     # Increase counter if this is a 3 girl family
+    ...     if counter_girls == 3:
+    ...         counter_3girls = counter_3girls + 1
+
+    >>> proportion = counter_3girls / 10000
 
 .. nbplot::
 
