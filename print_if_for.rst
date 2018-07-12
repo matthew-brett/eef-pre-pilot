@@ -109,6 +109,10 @@ The exercise is to write an ``if`` statement that prints "yes" if the number
 ``x`` is exactly divisible by 7, and prints nothing otherwise.  Test your code
 by setting various values of ``x``, and running the cell.
 
+What happens if you forget the colon ``:`` at the end of the ``if`` line?
+
+What happens if you forget to indent the block?
+
 *********
 For loops
 *********
@@ -119,4 +123,44 @@ looks like this:
 
 .. nbplot::
 
+    >>> for i in range(10):
+    ...     print(i)
+    ...
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
 
+There are several new things here.  Notice ``range(10)``.  This looks like a
+function, and it looks like it returns 10 numbers, starting at 0 and
+continuing through to 9.   That's good enough for our purposes.
+
+Next we see that the for statement is rather like the ``if`` statement.  It
+has form:
+
+* ``for`` followed by
+* a variable name (in this case ``i``, called the *loop variable*) followed
+  by:
+* an expression that retuns a series of things (``range(10)`` returns a series
+  of numbers from 0 through 9) followed by:
+* ``:`` (a colon) followed by
+* an indented *block* of code (``    print(i)``)
+
+For statments are just a little more complicated than `if` statements, and it
+is worth going through the logic carefully.  Read the for statement above like
+this:
+
+* in the first iteration of the loop, set ``i`` to have value 0.  Then print
+  ``i``;
+* in the second iteration of the loop, set ``i`` to have value 1.  Then print
+  ``i``;
+* in the third iteration of the loop, set ``i`` to have value 2.  Then print
+  ``i``;
+
+and so on.
