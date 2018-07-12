@@ -15,6 +15,18 @@ the function ``coin_toss``.  Like ``random.random`` our function ``coin_toss``
 will accept no arguments.  It will return a 0 50% of the time and a 1 50% of
 the time.
 
+First we import ``random``:
+
+.. nbplot::
+
+    >>> import random
+
+.. nbplot::
+    :hide-from: all
+    :show-to: doctest
+
+    >>> random.seed(1966)
+
 We make a function like this:
 
 .. nbplot::
@@ -87,3 +99,9 @@ You can try your function out a few times with the cell below:
 
     >>> girl_or_boy()
     0
+
+.. [#male-births] `Official UK government statistics
+   <https://www.gov.uk/government/statistics/gender-ratios-at-birth-in-great-britain-2010-to-2014>`_
+   give the birth ratio as 105.3. This the number of boys born for every 100
+   girls.
+
