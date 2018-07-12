@@ -2,6 +2,8 @@
 Print, If and For
 #################
 
+.. code-links:: clear
+
 *****
 Print
 *****
