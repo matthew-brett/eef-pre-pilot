@@ -47,6 +47,10 @@
 the function <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code>.  Like <code class="docutils literal notranslate"><span class="pre">random.random</span></code> our function <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code>
 will accept no arguments.  It will return a 0 50% of the time and a 1 50% of
 the time.</p>
+<p>First we import <code class="docutils literal notranslate"><span class="pre">random</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
 <p>We make a function like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">coin_toss</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="n">random_no</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
@@ -84,7 +88,7 @@ if a random number was &lt; 0.5, and a 1 otherwise.</p>
 <div class="section" id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <p>Up until now, we’ve assumed that the chance that a child is a boy is 0.5.  Now
-assume the proportion of boys born in the UK is 0.513 <a href="#id3"><span class="problematic" id="id1">[#male-births]_</span></a>.</p>
+assume the proportion of boys born in the UK is 0.513 <a class="footnote-reference" href="#male-births" id="id1">[1]</a>.</p>
 <p>Here is a new copy of the <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code> function, but renamed.  Like the
 <code class="docutils literal notranslate"><span class="pre">coin_toss</span></code> function, it returns 0 50% of the time, and 1 the rest of the
 time.  Modify the function to return 0 (for a boy) 51.3% of the time, and 1
@@ -104,6 +108,14 @@ time.  Modify the function to return 0 (for a boy) 51.3% of the time, and 1
 <span class="go">0</span>
 </pre></div>
 </div>
+<table class="docutils footnote" frame="void" id="male-births" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://www.gov.uk/government/statistics/gender-ratios-at-birth-in-great-britain-2010-to-2014">Official UK government statistics</a>
+give the birth ratio as 105.3. This the number of boys born for every 100
+girls.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 

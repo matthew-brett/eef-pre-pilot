@@ -71,15 +71,16 @@ of having a male child is not 0.5 but 0.513. <a class="footnote-reference" href=
 better simulation, we need to modify the Notebook to give a 0.513
 probability of <code class="docutils literal notranslate"><span class="pre">&quot;B&quot;</span></code> and a 0.487 probability of <code class="docutils literal notranslate"><span class="pre">&quot;G&quot;</span></code>. You can’t easily
 use <code class="docutils literal notranslate"><span class="pre">random.choice</span></code> for this, but you could an expression like this to
-decide if it is a boy:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">0.513</span>
+decide if it is a <em>girl</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">0.487</span>
 </pre></div>
 </div>
-<p>Modify of this copy of the Notebook to use something like this.  You should
-find that your estimate of the proportion of 3-girl families drops slightly,
-because girls are slightly less common than boys.</p>
-</li>
-<li><p class="first">[more detail in a second on the last part]</p>
+<p><code class="docutils literal notranslate"><span class="pre">random.uniform(0,</span> <span class="pre">1)</span></code> returns a random number between 0 and 1 - so the
+number it returns will be <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">0.487</span></code> about 48.7% of the time.</p>
+<p>Modify your new copy of the Notebook to use something like this to give the
+probability of a girl.  You should find that your estimate of the proportion
+of 3-girl families drops slightly, because girls are slightly less common
+than boys.</p>
 </li>
 </ul>
 <table class="docutils footnote" frame="void" id="male-births" rules="none">
