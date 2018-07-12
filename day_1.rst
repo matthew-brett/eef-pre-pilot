@@ -39,10 +39,12 @@ Homework
 
     random.uniform(0, 1) <= 0.513
 
-  Modify of this copy of the Notebook to use something like this.  You should
-  find that your estimate of the proportion of 3-girl families drops slightly,
-  because girls are slightly less common than boys.
-* [more detail in a second on the last part]
+  ``random.uniform(0, 1)`` returns a random number between 0 and 1 - so the
+  number it returns will be ``<= 0.513`` about 51.3% of the time.
+
+  Modify of your new copy of the Notebook to use something like this.  You
+  should find that your estimate of the proportion of 3-girl families drops
+  slightly, because girls are slightly less common than boys.
 
 .. [#male-births] `Official UK government statistics
    <https://www.gov.uk/government/statistics/gender-ratios-at-birth-in-great-britain-2010-to-2014>`_
