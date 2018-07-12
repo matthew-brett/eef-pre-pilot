@@ -18,7 +18,10 @@ Morning - thinking about sampling
 Afternoon - probability and simulation
 **************************************
 
+* back for ``for`` loops in :doc:`print_if_for`.
+* lists in :doc:`lists`.
 * solving with simulation; :doc:`three_girls`;
+* :doc:`functions`.
 * back to Brexit.  Formulating the null hypothesis.  The population and the
   sample; parameter and statistic. Simulating samples, and therefore,
   statistics.  The sampling distribution.  Has the poll taken a random
