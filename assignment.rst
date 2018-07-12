@@ -119,19 +119,19 @@ think you will see for these.  Explain why.
 
 .. nbplot::
 
-    >>> e = 3 * 10  #doctest: +SKIP
-    >>> e
+    >>> e = 3 * 10
+    >>> e  #doctest: +SKIP
 
 .. nbplot::
 
-    >>> f = e * 3  #doctest: +SKIP
-    >>> f
+    >>> f = e * 3
+    >>> f  #doctest: +SKIP
 
 .. nbplot::
 
-    >>> "g" = "Interesting"
+    >>> "g" = "Interesting"  #doctest: +SKIP
 
 .. nbplot::
 
-    >>> 5 = 3
-    >>> 5
+    >>> 5 = 3   #doctest: +SKIP
+    >>> 5  #doctest: +SKIP

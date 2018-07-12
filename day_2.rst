@@ -2,13 +2,11 @@
 Day 2
 #####
 
-Thursday 21st in Room 125, Geography.
-
 *******
 Morning
 *******
 
-* :doc:`samples_and_spread`;
+* :doc:`functions`.
 * Paired tests in :doc:`animal_attitudes`.
 * :doc:`what_order_is_best`.
 * Linear relationships and :doc:`school_and_fertility`.
