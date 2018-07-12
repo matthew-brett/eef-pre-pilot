@@ -12,14 +12,13 @@ Morning - thinking about sampling
   what is the probability that the family has 3 girls?  A simulation.
 * 10 minute break
 * 10.55 - 11.15 - what is the algorithm?
-* 11.15 - 12.00 - the machinery we need: ``random``, lists, ``if`` and
-  ``while``.
+* 11.15 - 12.00 - the machinery we will need: :doc:`print_if_for`.
 
 **************************************
 Afternoon - probability and simulation
 **************************************
 
-* solving with simulation; :doc:`number_of_girls`;
+* solving with simulation; :doc:`three_girls`;
 * back to Brexit.  Formulating the null hypothesis.  The population and the
   sample; parameter and statistic. Simulating samples, and therefore,
   statistics.  The sampling distribution.  Has the poll taken a random
