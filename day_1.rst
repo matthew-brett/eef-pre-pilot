@@ -22,6 +22,9 @@ Afternoon - probability and simulation
 * lists in :doc:`lists`.
 * solving with simulation; :doc:`three_girls`;
 
+.. needs
+    and / or / True == 1 / False == 0 / if 10: print('10')
+
 ********
 Homework
 ********
