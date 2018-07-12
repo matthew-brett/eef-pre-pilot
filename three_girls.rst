@@ -2,6 +2,8 @@
 Three girls
 ###########
 
+.. code-links:: clear
+
 We will use the ``choice`` function from the  ``random`` module.
 
 .. nbplot::
