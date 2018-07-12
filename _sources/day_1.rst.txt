@@ -22,8 +22,12 @@ Afternoon - probability and simulation
 * lists in :doc:`lists`.
 * solving with simulation; :doc:`three_girls`;
 
-.. needs
-    and / or / True == 1 / False == 0 / if 10: print('10')
+Notebooks from the afternoon:
+
+* :download:`riffing_on_if_for_and.ipynb`;
+* :download:`riffing_on_lists.ipynb`.
+
+An explanation of ``and`` and ``or``: :doc:`and_or`.
 
 ********
 Homework
