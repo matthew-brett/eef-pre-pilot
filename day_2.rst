@@ -28,6 +28,8 @@ Afternoon
 * :doc:`slice_list`
 * :doc:`brexit_ages`
 
+:download:`permutation_notes.ipynb`
+
 If we have time:
 
 * :doc:`what_order_is_best`
