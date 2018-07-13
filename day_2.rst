@@ -6,22 +6,23 @@ Day 2
 Morning
 *******
 
+* :doc:`while_loops`.
 * :doc:`functions`.
-* Paired tests in :doc:`animal_attitudes`.
-* :doc:`what_order_is_best`.
-* Linear relationships and :doc:`school_and_fertility`.
-* break into groups; decide on your dataset and question.
-
-2 hour break.
+* refactor :doc:`three_girls` to use a function.
+* refactor to family of any size.
+* refactor to any number of iterations.
+* return to the Brexit problem
+* refactor again
+* plotting
 
 *********
 Afternoon
 *********
 
-Work in groups on your chosen dataset and question.
+* permutation
+* :doc:`shuffle`.
+* :doc:`slice_list`
+* :doc:`brexit_ages`
 
-Two group permute code in :doc:`permuter`.
-
-Linear relationship permuations test in :doc:`linear`.
 
 .. include:: links_names.inc

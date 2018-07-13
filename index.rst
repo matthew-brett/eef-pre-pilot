@@ -52,3 +52,6 @@ algorithms and data analysis at the University of Birmingham.
     functions
     three_girls_no_lists
     and_or
+    while_loops
+    shuffle
+    slice_list
