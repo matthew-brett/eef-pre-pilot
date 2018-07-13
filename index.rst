@@ -55,3 +55,4 @@ algorithms and data analysis at the University of Birmingham.
     while_loops
     shuffle
     slice_list
+    plotting
