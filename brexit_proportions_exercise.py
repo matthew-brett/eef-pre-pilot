@@ -4,7 +4,7 @@
 #
 # * For solution see: [Testing Brexit Proportions](https://matthew-brett.github.io/les-pilot/brexit_proportions_solution.html).
 #
-# If you look back at [Analyzing Brexit](https://matthew-brett.github.io/les-pilot/brexit.html), you will see that we found:
+# If you look back at [Where are the Brexiteers?](https://matthew-brett.github.io/les-pilot/brexit_analysis.html), we have:
 #
 # * 541 people who said they voted to Leave the EU;
 #
@@ -74,7 +74,7 @@ def leave_or_remain():
 #: remember the brackets at the end
 leave_or_remain()
 
-# In [Three girls in a family of four](https://matthew-brett.github.io/les-pilot/number_of_girls.html), a single trial was four children.  In our case, a
+# In [Three girls](https://matthew-brett.github.io/les-pilot/three_girls.html), a single trial was four children.  In our case, a
 # single trial is 1315 Leave or Remain voters drawn at random. We calculate the
 # statistic for each trial:
 

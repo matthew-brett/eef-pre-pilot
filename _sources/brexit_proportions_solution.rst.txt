@@ -4,7 +4,7 @@ Testing Brexit Proportions
 
 .. code-links::
 
-If you look back at :doc:`brexit`, you will see that we found:
+If you look back at :doc:`brexit_analysis`, we have:
 
 * 541 people who said they voted to Leave the EU;
 * 774 people who said they voted to remain.
@@ -91,7 +91,7 @@ Leave or Remain voter with that proportion:
     >>> leave_or_remain()
     0
 
-In :doc:`number_of_girls`, a single trial was four children.  In our case, a
+In :doc:`three_girls`, a single trial was four children.  In our case, a
 single trial is 1315 Leave or Remain voters drawn at random. We calculate the
 statistic for each trial:
 

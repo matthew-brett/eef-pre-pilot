@@ -15,7 +15,7 @@ We have seen numbers and strings as types.
 .. nbplot::
 
     >>> b = 1.0
-    >>> type(a)
+    >>> type(b)
     <class 'float'>
 
 .. nbplot::
@@ -30,6 +30,7 @@ Another useful type, is the ``list``.  Here we make an empty list:
 
     >>> my_list = []
     >>> type(my_list)
+    <class 'list'>
 
 We can also put elements into the list:
 

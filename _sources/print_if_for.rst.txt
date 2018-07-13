@@ -23,7 +23,7 @@ It prints out the values that you pass it, such as strings or numbers.
     10
     >>> my_name = "Matthew"
     >>> print(my_name)
-    'Matthew'
+    Matthew
 
 This can be useful in the Notebook to show values as we execute things within
 a cell.
@@ -90,7 +90,7 @@ lines in the indented block, but they all have to be indented the same amount:
     ...
     Here in the if block
     x does equal 3
-    Still in the if block
+    Still in if block
 
 Now an exercise.  For this exercise, you will need the *modulo* operator:
 ``%``.  In an expression it returns the remainder of dividing the number on

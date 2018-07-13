@@ -2,28 +2,33 @@
 Day 2
 #####
 
-Thursday 21st in Room 125, Geography.
-
 *******
 Morning
 *******
 
-* :doc:`samples_and_spread`;
-* Paired tests in :doc:`animal_attitudes`.
-* :doc:`what_order_is_best`.
-* Linear relationships and :doc:`school_and_fertility`.
-* break into groups; decide on your dataset and question.
-
-2 hour break.
+* :doc:`while_loops`.
+* :doc:`functions`.
+* refactor :doc:`three_girls` to use a function.
+* refactor to family of any size.
+* refactor to any number of iterations.
+* :doc:`plotting`
+* back to Brexit.  Formulating the null hypothesis.  The population and the
+  sample; parameter and statistic. Simulating samples, and therefore,
+  statistics.  The sampling distribution.  Has the the poll taken a random
+  sample of Brexit voters? :doc:`brexit_proportions_exercise`.
 
 *********
 Afternoon
 *********
 
-Work in groups on your chosen dataset and question.
+* permutation
+* :doc:`shuffle`.
+* :doc:`slice_list`
+* :doc:`brexit_ages`
 
-Two group permute code in :doc:`permuter`.
+If we have time:
 
-Linear relationship permuations test in :doc:`linear`.
+* :doc:`what_order_is_best`
+* :doc:`school_and_fertility`
 
 .. include:: links_names.inc
