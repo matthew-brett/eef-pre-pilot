@@ -56,3 +56,4 @@ algorithms and data analysis at the University of Birmingham.
     shuffle
     slice_list
     plotting
+    what_is_this
