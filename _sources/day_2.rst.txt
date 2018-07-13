@@ -2,6 +2,8 @@
 Day 2
 #####
 
+:doc:`what_is_this`
+
 *******
 Morning
 *******
