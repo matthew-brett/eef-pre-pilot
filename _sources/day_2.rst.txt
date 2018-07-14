@@ -28,11 +28,12 @@ Afternoon
 * :doc:`slice_list`
 * :doc:`brexit_ages`
 
-:download:`permutation_notes.ipynb`
+**********************
+Notebooks during class
+**********************
 
-If we have time:
-
-* :doc:`what_order_is_best`
-* :doc:`school_and_fertility`
+* :download:`day2_starts.ipynb`
+* :download:`day2_girls_to_brexit.ipynb`
+* :download:`permutation_notes.ipynb`
 
 .. include:: links_names.inc
