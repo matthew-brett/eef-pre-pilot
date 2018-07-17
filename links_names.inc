@@ -117,7 +117,7 @@
     http://www.birmingham.ac.uk/Documents/university/edgbaston-campus-map.pdf
 
 .. Course:
-.. _course github repository: https://github.com/matthew-brett/les-pilot
+.. _course github repository: https://github.com/matthew-brett/eef-pre-pilot
 
 
 .. Substitutions
